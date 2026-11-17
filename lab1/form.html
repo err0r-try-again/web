@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Регистрация нового читателя в информационно-аналитическом журнале Курсор.">
+  <title>Регистрация читателя — Журнал «Курсор»</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-form">
+  <header class="site-header">
+    <div class="header-top container">
+      <div class="header-date">
+        <time datetime="2026-11-17">Вторник, 17 ноября 2026</time>
+        <span class="header-city">Москва +4°C</span>
+      </div>
+
+      <div class="header-brand">
+        <a href="index.html" class="brand-link">
+          <img src="images/logo.svg" alt="Логотип издания Курсор" width="280" height="52" class="brand-logo">
+        </a>
+      </div>
+
+      <div class="header-actions">
+        <a href="index.html" class="btn btn-secondary nav-action-btn">
+          <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+          </svg>
+          <span>На главную</span>
+        </a>
+      </div>
+    </div>
+
+    <nav class="main-nav" aria-label="Главная навигация">
+      <div class="container">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link">Главная</a></li>
+          <li class="nav-item"><a href="index.html#russia" class="nav-link">Россия</a></li>
+          <li class="nav-item"><a href="index.html#world" class="nav-link">В мире</a></li>
+          <li class="nav-item"><a href="index.html#economy" class="nav-link">Экономика</a></li>
+          <li class="nav-item"><a href="index.html#tech" class="nav-link">Технологии</a></li>
+          <li class="nav-item"><a href="index.html#culture" class="nav-link">Культура</a></li>
+          <li class="nav-item"><a href="form.html" class="nav-link active">Личный кабинет</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="site-main form-main container">
+    <section class="form-section">
+      <div class="form-header">
+        <h1 class="form-title">Регистрация нового читателя</h1>
+        <p class="form-subtitle">
+          Получите персональный доступ к архивам, закрытым аналитическим колонкам и ежедневным тематическим дайджестам.
+        </p>
+      </div>
+
+      <div class="form-layout">
+        <form class="registration-form" action="https://httpbin.org/post" method="POST">
+          <!-- Группа 1: Личная информация -->
+          <fieldset class="form-fieldset">
+            <legend class="form-legend">Личная информация</legend>
+
+            <div class="form-group">
+              <label for="reg-name" class="form-label required-label">Имя и фамилия</label>
+              <input type="text" id="reg-name" name="fullname" placeholder="Иван Иванов" required class="form-control">
+              <span class="field-hint">Укажите ваше реальное имя для подписи в комментариях</span>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group form-col">
+                <label for="reg-birthday" class="form-label required-label">Дата рождения</label>
+                <input type="date" id="reg-birthday" name="birth_date" required class="form-control">
+              </div>
+
+              <div class="form-group form-col">
+                <span class="form-label required-label">Пол</span>
+                <div class="radio-group" role="radiogroup" aria-label="Выбор пола">
+                  <label class="custom-choice-label">
+                    <input type="radio" name="gender" value="male" required class="choice-input">
+                    <span class="choice-text">Мужской</span>
+                  </label>
+                  <label class="custom-choice-label">
+                    <input type="radio" name="gender" value="female" class="choice-input">
+                    <span class="choice-text">Женский</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="reg-password" class="form-label required-label">Пароль</label>
+              <input type="password" id="reg-password" name="password" placeholder="Не менее 8 символов" minlength="8" required class="form-control">
+              <span class="field-hint">Используйте буквы, цифры и спецсимволы</span>
+            </div>
+          </fieldset>
+
+          <!-- Группа 2: Контактные данные -->
+          <fieldset class="form-fieldset">
+            <legend class="form-legend">Контактные данные</legend>
+
+            <div class="form-group">
+              <label for="reg-email" class="form-label required-label">Электронная почта</label>
+              <input type="email" id="reg-email" name="email" placeholder="example@domain.ru" required class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label for="reg-phone" class="form-label">Номер телефона</label>
+              <input type="tel" id="reg-phone" name="phone" placeholder="+7 (999) 000-00-00" pattern="[\+]?[0-9\s\-\(\)]+" class="form-control">
+              <span class="field-hint">Необязательное поле. Для двухфакторной аутентификации</span>
+            </div>
+
+            <div class="form-group">
+              <label for="reg-time-slot" class="form-label">Удобный интервал для связи</label>
+              <select id="reg-time-slot" name="preferred_contact_time" class="form-control select-control">
+                <option value="" disabled selected>Выберите временной интервал</option>
+                <option value="morning">Утро (08:00 – 12:00)</option>
+                <option value="day">День (12:00 – 17:00)</option>
+                <option value="evening">Вечер (17:00 – 22:00)</option>
+                <option value="night">Ночь (22:00 – 08:00)</option>
+              </select>
+            </div>
+
+            <div class="form-group strike-group">
+              <span class="form-label">Тематические подписки (отмеченные вычеркиваются):</span>
+              <div class="checkbox-list">
+                <div class="checkbox-item">
+                  <input type="checkbox" id="topic-tech" name="topics" value="tech" class="strike-checkbox">
+                  <label for="topic-tech" class="strike-label">Технологии и инновации</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="topic-economy" name="topics" value="economy" class="strike-checkbox">
+                  <label for="topic-economy" class="strike-label">Экономика и рынки</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="topic-culture" name="topics" value="culture" class="strike-checkbox">
+                  <label for="topic-culture" class="strike-label">Культурная афиша</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group checkbox-consent">
+              <label class="custom-choice-label">
+                <input type="checkbox" name="terms" required class="choice-input">
+                <span class="choice-text">Я согласен с <a href="#privacy" class="inline-link">политикой обработки персональных данных</a></span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-submit">
+              <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+              </svg>
+              <span>Зарегистрироваться</span>
+            </button>
+
+            <button type="reset" class="btn btn-outline">
+              <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+              </svg>
+              <span>Очистить форму</span>
+            </button>
+          </div>
+        </form>
+
+        <aside class="form-info-panel">
+          <div class="info-card">
+            <h2 class="info-card-title">Преимущества читателя «Курсора»</h2>
+            <ul class="benefits-list">
+              <li>Доступ к закрытым авторским колонкам экспертов</li>
+              <li>Возможность участвовать в дискуссиях и опросах</li>
+              <li>Архив всех печатных и цифровых номеров за 10 лет</li>
+              <li>Индивидуальная подборка аналитических сюжетов</li>
+              <li>Отключение рекламных баннеров и спецпроектов</li>
+              <li>Приглашения на открытые лекции редакции</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col brand-col">
+        <div class="footer-logo">
+          <img src="images/logo.svg" alt="Курсор" width="200" height="38">
+        </div>
+        <p class="footer-desc">
+          Независимое электронное периодическое издание, освещающее вопросы науки, инноваций, общества и культуры.
+        </p>
+        <p class="footer-copy">&copy; 2026 Сетевое издание «Курсор». Все права защищены.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Разделы</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#russia">Россия</a></li>
+          <li><a href="index.html#world">В мире</a></li>
+          <li><a href="index.html#economy">Экономика</a></li>
+          <li><a href="index.html#tech">Технологии</a></li>
+          <li><a href="index.html#culture">Культура</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Документы</h4>
+        <ul class="footer-links">
+          <li><a href="form.html">Регистрация читателя</a></li>
+          <li><a href="#rules">Правила публикации</a></li>
+          <li><a href="#privacy">Политика конфиденциальности</a></li>
+          <li><a href="https://mospolytech.ru" target="_blank" rel="noopener noreferrer">Партнерский портал</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Редакция</h4>
+        <address class="footer-contacts">
+          <p class="contact-item">
+            Телефон: <a href="tel:+74951234567" class="contact-link">+7 (495) 123-45-67</a>
+          </p>
+          <p class="contact-item">
+            Почта: <a href="mailto:editor@cursor-news.ru" class="contact-link">editor@cursor-news.ru</a>
+          </p>
+          <p class="contact-item">Адрес: 107023, г. Москва, ул. Большая Семеновская, д. 38</p>
+        </address>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

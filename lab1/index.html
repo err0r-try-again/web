@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Информационный портал Курсор: свежие новости науки, технологий, культуры и общества.">
+  <title>Курсор — Информационно-аналитический журнал</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top container">
+      <div class="header-date">
+        <time datetime="2026-11-17">Вторник, 17 ноября 2026</time>
+        <span class="header-city">Москва +4°C</span>
+      </div>
+
+      <div class="header-brand">
+        <a href="index.html" class="brand-link">
+          <img src="images/logo.svg" alt="Логотип издания Курсор" width="280" height="52" class="brand-logo">
+        </a>
+      </div>
+
+      <div class="header-actions">
+        <a href="form.html" class="btn btn-primary nav-action-btn">
+          <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+          </svg>
+          <span>Регистрация</span>
+        </a>
+      </div>
+    </div>
+
+    <nav class="main-nav" aria-label="Главная навигация">
+      <div class="container">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link active">Главная</a></li>
+          <li class="nav-item"><a href="#russia" class="nav-link">Россия</a></li>
+          <li class="nav-item"><a href="#world" class="nav-link">В мире</a></li>
+          <li class="nav-item"><a href="#economy" class="nav-link">Экономика</a></li>
+          <li class="nav-item"><a href="#tech" class="nav-link">Технологии</a></li>
+          <li class="nav-item"><a href="#culture" class="nav-link">Культура</a></li>
+          <li class="nav-item"><a href="form.html" class="nav-link">Личный кабинет</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="site-main container">
+    <section class="lead-section" id="tech">
+      <article class="lead-article">
+        <div class="lead-badge">Спецвыпуск</div>
+        <h1 class="lead-title">
+          <a href="#lead-full">Отечественные исследователи представили новую концепцию экосистемы автономного транспорта</a>
+        </h1>
+        <p class="lead-intro">
+          Междисциплинарная группа инженеров и урбанистов завершила серию масштабных испытаний беспилотной логистической сети, объединяющей электробусы и сортировочные центры будущего.
+        </p>
+
+        <figure class="lead-figure">
+          <picture>
+            <source srcset="images/hero-news.webp" type="image/webp">
+            <img src="images/hero-news.jpg" alt="Инновационная лаборатория автономных систем" width="1200" height="675" class="lead-image" loading="lazy">
+          </picture>
+          <figcaption class="lead-caption">
+            Комплекс стендовых испытаний систем навигации нового поколения. Фото: Пресс-служба исследовательского центра.
+          </figcaption>
+        </figure>
+
+        <p class="lead-text">
+          Разработка базируется на открытых протоколах обмена данными и призвана снизить углеродный след городской инфраструктуры на четверть в течение ближайших пяти лет. Первые тестовые маршруты планируется развернуть в пилотных технопарках уже в первом квартале следующего года.
+        </p>
+      </article>
+
+      <aside class="sidebar-news">
+        <div class="sidebar-block">
+          <h2 class="sidebar-heading">Актуальное сегодня</h2>
+          <ul class="sidebar-list">
+            <li class="sidebar-item">
+              <span class="news-time">14:30</span>
+              <a href="#item1" class="sidebar-link">В столичных университетах открылись новые центры квантовых вычислений</a>
+            </li>
+            <li class="sidebar-item">
+              <span class="news-time">13:15</span>
+              <a href="#item2" class="sidebar-link">Модернизация высокоскоростной транспортной магистрали опережает график</a>
+            </li>
+            <li class="sidebar-item">
+              <span class="news-time">11:45</span>
+              <a href="#item3" class="sidebar-link">Ученые-климатологи обнародовали ежегодный доклад по биосфере Арктики</a>
+            </li>
+            <li class="sidebar-item">
+              <span class="news-time">10:00</span>
+              <a href="#item4" class="sidebar-link">Архитектурный биеннале подводит итоги конкурса урбанистических проектов</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="subscribe-card">
+          <h3 class="subscribe-title">Вечерний вестник</h3>
+          <p class="subscribe-desc">Главные аналитические материалы и сводки дня в одном письме.</p>
+          <form class="subscribe-form" action="https://httpbin.org/post" method="POST">
+            <label for="sub-email" class="visually-hidden">Ваш электронный адрес</label>
+            <input type="email" id="sub-email" name="subscriber_email" placeholder="primer@domain.ru" required class="input-text">
+            <button type="submit" class="btn btn-secondary btn-block">
+              <span>Подписаться</span>
+              <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </aside>
+    </section>
+
+    <section class="topics-grid" id="economy">
+      <h2 class="section-title">Материалы рубрик</h2>
+      <div class="cards-wrapper">
+        <article class="news-card">
+          <div class="card-image-wrap">
+            <img src="images/economy.png" alt="Графики экономических показателей" width="600" height="400" class="card-img" loading="lazy">
+            <span class="card-tag">Экономика</span>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="#econ-1">Развитие зеленых облигаций и поддержка индустриальных инноваций</a>
+            </h3>
+            <p class="card-excerpt">
+              Объем размещения ответственных финансовых инструментов в текущем квартале показал устойчивый прирост.
+            </p>
+            <div class="card-meta">
+              <time datetime="2026-11-17">17 ноя 2026</time>
+              <span class="card-read-time">4 мин чтения</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="news-card" id="culture">
+          <div class="card-image-wrap">
+            <picture>
+              <source srcset="images/culture.webp" type="image/webp">
+              <img src="images/culture.jpg" alt="Театральная сцена и декорации" width="600" height="400" class="card-img" loading="lazy">
+            </picture>
+            <span class="card-tag">Культура</span>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="#cult-1">Ретроспектива классического авангарда открылась в центральной галерее</a>
+            </h3>
+            <p class="card-excerpt">
+              В экспозиции представлено более ста архивных полотен, чертежей и эскизов из региональных коллекций.
+            </p>
+            <div class="card-meta">
+              <time datetime="2026-11-16">16 ноя 2026</time>
+              <span class="card-read-time">6 мин чтения</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="news-card quote-card">
+          <div class="quote-wrapper">
+            <blockquote class="featured-quote">
+              «Истинный прогресс технологической среды заключается в ее гармоничной интеграции с повседневной жизнью человека».
+            </blockquote>
+            <cite class="quote-author">— Профессор А. В. Смирнов</cite>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col brand-col">
+        <div class="footer-logo">
+          <img src="images/logo.svg" alt="Курсор" width="200" height="38">
+        </div>
+        <p class="footer-desc">
+          Независимое электронное периодическое издание, освещающее вопросы науки, инноваций, общества и культуры.
+        </p>
+        <p class="footer-copy">&copy; 2026 Сетевое издание «Курсор». Все права защищены.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Разделы</h4>
+        <ul class="footer-links">
+          <li><a href="#russia">Россия</a></li>
+          <li><a href="#world">В мире</a></li>
+          <li><a href="#economy">Экономика</a></li>
+          <li><a href="#tech">Технологии</a></li>
+          <li><a href="#culture">Культура</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Документы</h4>
+        <ul class="footer-links">
+          <li><a href="form.html">Регистрация читателя</a></li>
+          <li><a href="#rules">Правила публикации</a></li>
+          <li><a href="#privacy">Политика конфиденциальности</a></li>
+          <li><a href="https://mospolytech.ru" target="_blank" rel="noopener noreferrer">Партнерский портал</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Редакция</h4>
+        <address class="footer-contacts">
+          <p class="contact-item">
+            Телефон: <a href="tel:+74951234567" class="contact-link">+7 (495) 123-45-67</a>
+          </p>
+          <p class="contact-item">
+            Почта: <a href="mailto:editor@cursor-news.ru" class="contact-link">editor@cursor-news.ru</a>
+          </p>
+          <p class="contact-item">Адрес: 107023, г. Москва, ул. Большая Семеновская, д. 38</p>
+        </address>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
